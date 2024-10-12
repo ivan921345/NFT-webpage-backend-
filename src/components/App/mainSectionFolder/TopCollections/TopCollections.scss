@@ -1,0 +1,187 @@
+.topCollectionContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .nftCard {
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:hover {
+      scale: 1.1;
+      cursor: pointer;
+    }
+    .nftCard__image {
+      img {
+        border-radius: 20px;
+        margin-bottom: 10px;
+        width: 500px;
+        height: 500px;
+      }
+    }
+    .nftAbout {
+      display: flex;
+      justify-content: space-between;
+      .nftAbout__author {
+        display: flex;
+        align-items: center;
+        .authorImage {
+          img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .authorName {
+          display: flex;
+          flex-direction: column;
+          p {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 900;
+          }
+          .authorName__text {
+            font-weight: 400;
+            font-size: 1rem;
+          }
+        }
+      }
+      .nftBid {
+        .nftBid__text {
+          font-size: 1rem;
+          font-weight: 400;
+          color: #333;
+          text-transform: capitalize;
+        }
+        p {
+          margin: 0;
+          font-weight: 900;
+          font-size: 1.2rem;
+          color: #000;
+        }
+      }
+    }
+  }
+  .listOfNftsToShow {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    max-width: 400px;
+    min-width: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .container {
+      margin: 20px 0px;
+      display: flex;
+      transition: 0.2s;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(128, 128, 128, 0.349);
+      }
+      img {
+        margin-right: 20px;
+        border-radius: 15px;
+      }
+      .nftInfo {
+        display: flex;
+        flex-direction: column;
+        p {
+          font-weight: 900;
+          font-size: 1.2rem;
+          color: #333;
+        }
+        .authorImageSect {
+          display: flex;
+          align-items: center;
+          img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+          }
+          p {
+            font-weight: 700;
+            font-size: 1rem;
+            color: rgb(0, 209, 0);
+            padding: 6px 10px;
+            border: rgb(0, 209, 0) 1px solid;
+            border-radius: 8px;
+          }
+        }
+        button {
+          padding: 10px 16px;
+          font-size: 1rem;
+          border-radius: 20px;
+          font-weight: 200;
+          background-color: rgb(61, 0, 175);
+          color: #fff;
+          border: none;
+          transition: 0.2s;
+          transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+          &:hover,
+          &:focus {
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            border: solid black 1px;
+          }
+        }
+      }
+    }
+  }
+  .topCollectionsOver {
+    .topCollectionsOver__title {
+      font-weight: 900;
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    .topCollectionsOver__lastSevenDays {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: rgb(61, 0, 175);
+    }
+    .userCard {
+      display: flex;
+      align-items: center;
+      .userCard__id {
+        font-weight: 700;
+        font-size: 2rem;
+        color: #000;
+        margin-right: 10px;
+      }
+      .userCard__profilePict {
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+      }
+      .userCard__nameSect {
+        .userName {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #000;
+          margin: 0;
+        }
+        .price {
+          font-weight: 400;
+          font-size: 1.2rem;
+          color: #030303;
+          margin: 0;
+        }
+      }
+      .increaseInIncome {
+        font-weight: 700;
+        margin-left: 20px;
+        font-size: 2rem;
+      }
+      .greenIncome {
+        color: rgb(0, 218, 0);
+      }
+      .redIncome {
+        color: rgb(218, 0, 0);
+      }
+    }
+  }
+}
