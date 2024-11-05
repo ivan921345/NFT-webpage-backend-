@@ -3,17 +3,32 @@ import ReactDOM from 'react-dom/client';
 import App from 'components/App/App';
 import './index.css';
 import MoreNfts from 'components/MoreNfts/MoreNfts';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+
+import Header from 'components/App/Header/Header';
 
 const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <App />,
-    },
-    {
-      path: 'more-nfts',
-      element: <MoreNfts />,
+      element: (
+        <>
+          <Header />
+          <Outlet />
+        </>
+      ),
+      children: [
+        {
+          index: true,
+          path: '/',
+          element: <App />,
+        },
+
+        {
+          path: 'more-nfts',
+          element: <MoreNfts />,
+        },
+      ],
     },
   ],
   { basename: '/NFT-webpage-backend-' }
