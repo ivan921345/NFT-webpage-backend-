@@ -1,0 +1,54 @@
+.Modal {
+  top: 0;
+  left: 0;
+  padding: 4rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.37);
+  position: fixed;
+  form {
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 7px;
+      font-size: 1.2rem;
+    }
+    .submitButton {
+      padding: 10px 8px;
+      font-size: 2rem;
+      background-color: transparent;
+      border: 2px solid black;
+      border-radius: 10px;
+      transition: 0.4s;
+      &:hover,
+      &:focus {
+        background-color: #33333355;
+        cursor: pointer;
+      }
+    }
+    .closeCross {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px;
+      border: none;
+      background-color: transparent;
+      transition: 0.3s;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: #33333355;
+        border-bottom-left-radius: 50%;
+      }
+    }
+  }
+}
